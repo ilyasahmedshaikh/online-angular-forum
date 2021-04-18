@@ -3,6 +3,8 @@
 .view-board {
   padding: 25px 0px;
   .heading-bar {
+    display: flex;
+    justify-content: space-between;
     h6 {
       font-size: 20px;
       color: black;
