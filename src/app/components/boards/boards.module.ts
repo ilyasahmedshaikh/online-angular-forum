@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BoardsRoutingModule } from './boards-routing.module';
 import { BoardsComponent } from './boards.component';
@@ -12,7 +13,9 @@ import { BoardListingComponent } from './board-listing/board-listing.component';
   declarations: [BoardsComponent, AddEditBoardComponent, ViewBoardComponent, BoardListingComponent],
   imports: [
     CommonModule,
-    BoardsRoutingModule
+    BoardsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BoardsModule { }

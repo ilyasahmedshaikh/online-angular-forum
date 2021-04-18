@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-board',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditBoardComponent implements OnInit {
 
-  constructor() { }
+  programForm: any = FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
+    this.formInit();
+  }
+
+  formInit() {
+    this.programForm = this.fb.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      publicBoard: ['', Validators.required],
+    });
   }
 
 }
